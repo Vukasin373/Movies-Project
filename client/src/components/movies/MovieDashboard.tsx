@@ -60,10 +60,17 @@ export default function MovieDashboard() {
 
   const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.key === "ArrowUp") {
-      if (activeRow > 0 && !selectedMovie) setActiveRow(activeRow - 1);
+      if (activeRow > 0 && !selectedMovie) {
+        setActiveRow(activeRow - 1);
+        if (activeColumn >= movies[activeRow - 1].length)
+          setActiveColumn(movies[activeRow - 1].length - 1);
+      }
     } else if (event.key === "ArrowDown") {
-      if (activeRow < movies.length - 1 && !selectedMovie)
+      if (activeRow < movies.length - 1 && !selectedMovie) {
         setActiveRow(activeRow + 1);
+        if (activeColumn >= movies[activeRow + 1].length)
+          setActiveColumn(movies[activeRow + 1].length - 1);
+      }
     } else if (event.key === "ArrowLeft") {
       if (activeColumn > 0 && !selectedMovie) setActiveColumn(activeColumn - 1);
     } else if (event.key === "ArrowRight") {
