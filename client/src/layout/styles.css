@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+   
+}
+.mainContainer{
+    display: flex;
+}
+
+.movieContainer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  
+}
+
+.row {
+    display: flex;
+    margin: 20px;
+    
+}
+
+.image{
+    display: flex;
+    flex-grow: 1;
+    width: 140px;
+    height: 110px;
+}
+
+.movieItem{
+    display: flex;
+    flex-grow: 1;
+}
+
+.activeItem{
+    border: 3px solid red;
+    
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .modal .imageModal {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
